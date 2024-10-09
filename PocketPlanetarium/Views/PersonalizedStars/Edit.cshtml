@@ -1,0 +1,39 @@
+﻿@model PocketPlanetarium.Models.PersonalizedStar
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PersonalizedStar</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="personalizedStarId" />
+            <div class="form-group">
+                <label asp-for="starId" class="control-label"></label>
+                <select asp-for="starId" class="form-control" asp-items="ViewBag.starId"></select>
+                <span asp-validation-for="starId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="planetariumId" class="control-label"></label>
+                <select asp-for="planetariumId" class="form-control" asp-items="ViewBag.planetariumId"></select>
+                <span asp-validation-for="planetariumId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
