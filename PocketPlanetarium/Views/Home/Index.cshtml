@@ -2,7 +2,47 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+    <div class="title">
+        <h1>PocketPlanetarium</h1>
+        <h3>The Universe at your finger tips!</h3>
+    </div>
+    <div class="box">
+        <section>
+            <div class="left-box">
+                <h2>Prepare to touch down...</h2>
+                <p><strong>On new worlds both far and very far with our catalog of planets!</strong></p>
+                <p>Our home solar system is made up of 8 planets and 5 dwarf planets, but that doesn't mean there aren't more out their just beyond our system. Here you can explore the vast and numerous exoplanets that lie just beyond our celestial backyard along with the planets we know and love. Althought the name exoplanet makes it sound like these planets are different from normal ones similar to dwarf planets, it actually simply means that they are normal planets that lie outside of our solar system.</p>
+                <a class="button_a" asp-area=" " asp-controller="Planets" asp-action="Index">
+                    <button>Touch down on new land!</button>
+                </a>
+            </div>
+            <div class="right-box">
+                <img src="~/images/blue-marble-apollo-17-16x9-1.webp" alt="Earth" />
+            </div>
+        </section>
+    </div>
+    <div class="box">
+        <section>
+            <div class="left-box">
+                <img src="~/images/Carina_Nebula-1.webp" alt="Stars" />
+            </div>
+            <div class="right-box">
+                <h2>Blast off...</h2>
+                <p><strong>Towards a ever shinning sky with our catalog of stars!</strong></p>
+                <p>When you look up into the night sky you can see thousands upon millions of stars, each one shinning brightly trillions of miles away. For thousands of years humans have used stars for many things, from guiding our ships across sees, to helping us tell stories or just sharing a moment with someone under their twinkling lights. Stars are all around just and yet they are so far away that we don't know what some of them look like. Are they orange like our star or are the blue, green, maybe even red! Get ready to find out with our extensive catalog of stars.'</p>
+                <a class="button_a" asp-area="" asp-controller="Stars" asp-action="Index">
+                    <button>Blast off into the great unknown!</button>
+                </a>
+            </div>
+        </section>
+    </div>
+    <div class="box">
+        <section>
+            <div>
+                <h2>Planetarium</h2>
+                <p><strong>Create your own solar system out of your favorite planets and stars!</strong></p>
+            </div>
+        </section>
+    </div>
+</body>

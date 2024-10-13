@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black text-white">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PocketPlanetarium</a>
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">PocketPlanetarium</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,13 +20,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Planets" asp-action="Index">Planets</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Planets" asp-action="Index">Planets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Stars" asp-action="Index">Stars</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Stars" asp-action="Index">Stars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Planetariums" asp-action="Index">Planetarium</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Planetariums" asp-action="Index">Planetarium</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -40,9 +40,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer">
         <div class="container">
-            &copy; 2024 - PocketPlanetarium - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - PocketPlanetarium - David Simmons, 1220487, Comp2084
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

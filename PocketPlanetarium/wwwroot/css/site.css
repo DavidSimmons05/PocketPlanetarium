@@ -17,6 +17,87 @@ html {
   min-height: 100%;
 }
 
+header, footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: black;
+    background: url("../images/The_Helix_Nebula-1.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.title {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.box{
+    border-radius: 15px;
+}
+
+section {
+    border-radius: 15px;
+    background: rgb(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+a.button_a {
+    height: 100%;
+}
+
+button{
+    border-radius: 15px;
+    border: solid 1px black;
+    width: auto;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    background: url(../images/The_Helix_Nebula-1.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button:hover{
+    background: url(../images/Sun_Emits_Flare.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: rgb(0, 0, 0, 0.70) 4px;
+    transition: ease-in-out 0.5s;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+    border-radius: 15px;
+    border: solid 1px #258cfb;
 }

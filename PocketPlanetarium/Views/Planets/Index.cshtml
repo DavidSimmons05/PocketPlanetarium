@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<PocketPlanetarium.Models.Planet>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Planets";
 }
 
-<h1>Index</h1>
+<h1>Planets</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -58,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.DiscoveryDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
+                <img src="@Html.DisplayFor(modelItem => item.ImagePath)" />
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.planetId">Edit</a> |

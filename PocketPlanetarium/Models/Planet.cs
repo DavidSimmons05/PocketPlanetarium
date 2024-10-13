@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.VisualBasic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PocketPlanetarium.Models
 {
@@ -16,10 +17,8 @@ namespace PocketPlanetarium.Models
 
         public double Mass { get; set; }
 
-        [Required]
         public double StellarMagnitude { get; set; }
 
-        [Required]
         public DateOnly DiscoveryDate { get; set; }
 
         public string ImagePath { get; set; }
