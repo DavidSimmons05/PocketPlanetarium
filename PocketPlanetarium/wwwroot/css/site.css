@@ -101,3 +101,37 @@ img{
     border-radius: 15px;
     border: solid 1px #258cfb;
 }
+
+tbody{
+    display: grid;
+    gap: 10px;
+    column-count: 3;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 15px;
+
+}
+td {
+    margin: 5px;
+    border-bottom: none;
+    color: white;
+}
+td > img{
+    width: contain;
+    border: none;
+}
+.itemName{
+    font-size: 1.5em;
+    margin-bottom: 0;
+    align-content: center;
+}
+.itemDescription{
+    font-size: 1em;
+    align-content: center;
+}

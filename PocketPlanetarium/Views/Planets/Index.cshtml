@@ -4,12 +4,15 @@
     ViewData["Title"] = "Planets";
 }
 
-<h1>Planets</h1>
+<div class="title">
+    <h1>Planets</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+</div>
 <table class="table">
+    <!--
     <thead>
         <tr>
             <th>
@@ -36,29 +39,34 @@
             <th></th>
         </tr>
     </thead>
+    -->
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
+        <tr class="output">
+            <td class="itemName">
+                        @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td class="itemDescripition" style="margin-top:0;padding-top:0;">
+                        @Html.DisplayFor(modelItem => item.Description)
+            </td>    
+            <td class="itemDistance">
+                    <p style="font-size:smaller;margin-bottom:0;">Distance from Earth in Parsecs:</p>
+                    @Html.DisplayFor(modelItem => item.Distance)
+            </td>               
+            <td class="itemMass">
+                    <p style="font-size:smaller;margin-bottom:0;">Mass of planet in Earths:</p>
+                    @Html.DisplayFor(modelItem => item.Mass)
+            </td>               
+            <td class="itemMagnitude">
+                    <p style="font-size:smaller;margin-bottom:0;">Stellar Magnitude:</p>
+                    @Html.DisplayFor(modelItem => item.StellarMagnitude)
+            </td>  
+            <td class="itemDate">
+                    <p style="font-size:smaller;margin-bottom:0;">Year Discovered:</p>
+                    @Html.DisplayFor(modelItem => item.DiscoveryDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Distance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mass)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StellarMagnitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiscoveryDate)
-            </td>
-            <td>
-                <img src="@Html.DisplayFor(modelItem => item.ImagePath)" />
+                <img class="tableImage" src="@Html.DisplayFor(modelItem=> item.ImagePath)" alt="@Html.DisplayFor(modelItem => item.Name)" />
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.planetId">Edit</a> |
