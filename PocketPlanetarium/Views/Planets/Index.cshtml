@@ -7,9 +7,13 @@
 <div class="title">
     <h1>Planets</h1>
 
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+    }
+
 </div>
 <table class="table">
     <!--
@@ -69,9 +73,13 @@
                 <img class="tableImage" src="@Html.DisplayFor(modelItem=> item.ImagePath)" alt="@Html.DisplayFor(modelItem => item.Name)" />
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.planetId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.planetId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.planetId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.planetId">Details</a>
+                @if (User.Identity.IsAuthenticated){
+                        <a asp-action="Edit" asp-route-id="@item.planetId">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.planetId">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.planetId">Delete</a>
+                }
+                
             </td>
         </tr>
 }
