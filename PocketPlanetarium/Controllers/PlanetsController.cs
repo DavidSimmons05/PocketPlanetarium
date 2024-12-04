@@ -22,7 +22,7 @@ namespace PocketPlanetarium.Controllers
         // GET: Planets
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Planet.ToListAsync());
+            return View("Index", await _context.Planet.ToListAsync());
         }
 
         // GET: Planets/Details/5
@@ -30,23 +30,23 @@ namespace PocketPlanetarium.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                return View("404");
             }
 
             var planet = await _context.Planet
                 .FirstOrDefaultAsync(m => m.planetId == id);
             if (planet == null)
             {
-                return NotFound();
+                return View("404");
             }
 
-            return View(planet);
+            return View("Details", planet);
         }
 
         // GET: Planets/Create
         public IActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         // POST: Planets/Create
